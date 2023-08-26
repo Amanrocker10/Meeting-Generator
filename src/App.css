@@ -1,0 +1,148 @@
+/* Main app container */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Main heading */
+h1 {
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.form-input {
+  border: none;
+  border-bottom: 2px solid #e5e5e5;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.form-input:focus {
+  border-bottom: 2px solid #007bff;
+  outline: none;
+}
+
+.form-submit {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-submit:hover {
+  background-color: #0062cc;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.minutes-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.minutes-item {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.minutes-item:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.minutes-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.minutes-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.minutes-delete {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.minutes-delete:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Button:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #0077b6 0%
+    #0077b6 50%
+    #023e8a 100%
+  );
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.Button:hover::before {
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .minutes-container {
+    padding: 0 1rem;
+  }
+}
